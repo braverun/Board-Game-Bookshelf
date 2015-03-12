@@ -1,13 +1,22 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* Colors */
+$regal-blue: #003b6f;
+$endeavour-blue: #32628b;
+
+$primary-color: $regal-blue;
+$primary-accent-color: $endeavour-blue;
+
+
 /* Fonts */
 body {
-  background: url("images/left-nav-background.jpg") repeat-y 0;
-  font-family: 'Sanchez', serif; }
+  background: url('images/left-nav-background.jpg') repeat-y 0;
+  font-family: 'Sanchez', serif;
+}
 
 h1,
 h2,
@@ -15,20 +24,25 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+}
 
 /* Universal Stlyles */
+
 a {
   text-decoration: none;
-  color: white; }
+  color: white;
+}
 
 a:visited {
-  color: white; }
+  color: white;
+}
 
 header {
   background-color: #003b6f;
   height: 100px;
-  text-align: center; }
+  text-align: center;
+}
 
 .app-title {
   display: inline-block;
@@ -36,43 +50,52 @@ header {
   padding-top: 20px;
   text-align: center;
   color: white;
-  font-size: 40px; }
+  font-size: 40px;
+}
 
 .top-nav {
   margin-right: 40px;
   text-align: right;
   color: white;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 .settings-icon,
 .log-out {
-  margin-left: 10px; }
+  margin-left: 10px;
+}
 
 .left-nav {
   float: left;
   margin-right: 60px;
-  width: 140px; }
+  width: 140px;
+}
 
 .left-nav-ul {
   margin-top: 40px;
   padding: 0;
   list-style: none;
-  text-align: center; }
+  text-align: center;
+}
 
 .left-nav-link {
   margin-top: 20px;
   text-decoration: none;
-  color: white; }
+  color: white;
+}
 
 .left-nav-link:visited {
-  color: white; }
+  color: white;
+}
 
 .main-content {
   margin-left: 200px;
-  color: #003b6f; }
+  color: #003b6f;
+}
 
 .content-heading {
-  font-size: 30px; }
+  font-size: 30px;
+}
 
 /* Index / Bookshelf Page */
 .game {
@@ -82,14 +105,17 @@ header {
   background-color: #ffba45;
   width: 200px;
   height: 200px;
-  color: transparent; }
+  color: transparent;
+}
 
 .game:hover {
-  color: white; }
+  color: white;
+}
 
 .game-title {
   margin-top: 125px;
-  text-align: center; }
+  text-align: center;
+}
 
 /* Log In Page */
 .log-in-container {
@@ -100,39 +126,46 @@ header {
   width: 450px;
   height: 235px;
   text-align: center;
-  font-size: 25px; }
+  font-size: 25px;
+}
 
 .log-in-button {
   float: right;
   border: 0;
   background-color: #003b6f;
   color: white;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 /* Add Game Page/ Search */
 .search-container {
   display: block;
   margin: 20px;
   width: 90%;
-  text-align: center; }
+  text-align: center;
+}
 
 .search-button {
-  border: 2px solid #32628b;
+  border: 2px solid $primary-accent-color;
   background-color: white;
-  color: #003b6f; }
+  color: $primary-color;
+}
 
 .search-bar {
-  width: 90%; }
+  width: 90%;
+}
 
 .results {
   margin: 25px 0;
-  width: 90%; }
+  width: 90%;
+}
 
 .result {
   margin-bottom: 25px;
   border: solid #32628b 2px;
   padding: 10px;
-  list-style: none; }
+  list-style: none;
+}
 
 .result-image {
   display: inline-block;
@@ -140,52 +173,60 @@ header {
   background-color: #ffba45;
   width: 120px;
   height: 120px;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .result-text {
   display: inline-block;
   width: 70%;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .result-title {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 .result-description {
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 .add-game-button {
-  border: 2px solid #32628b;
+  border: 2px solid $primary-accent-color;
   background-color: white;
-  color: #003b6f; }
+  color: $primary-color;
+}
 
 /* Game Details Page */
 .game-details-container {
-  color: #003b6f; }
+  color: #003b6f;
+}
 
 .game-details-left {
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 .game-details-image {
   margin: 5px 25px;
   background-color: #ffba45;
   width: 200px;
-  height: 200px; }
+  height: 200px;
+}
 
 .remove-game {
   display: block;
   margin: auto;
-  border: 2px solid #32628b;
+  border: 2px solid $primary-accent-color;
   background-color: white;
-  color: #003b6f;
-  font-size: 10px; }
+  color: $primary-color;
+  font-size: 10px;
+}
 
 .game-info {
   display: inline-block;
   max-width: 40%;
-  vertical-align: top; }
-
-/*# sourceMappingURL=app.css.map */
+  vertical-align: top;
+}

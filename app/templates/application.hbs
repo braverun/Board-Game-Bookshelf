@@ -1,3 +1,17 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<header>
+    <h1 class="app-title">Board Game Bookshelf</h1>
+    <div class="top-nav">
+      <span class="user-name">Welcome, Weston!</span>
+      <i class="fa fa-cog settings-icon"></i>
+      <a href="logged-out.html" class="log-out">Log Out</a>
+    </div>
+  </header>
+
+  <div class="left-nav">
+    <ul class="left-nav-ul">
+      <li class="left-nav-link">{{#link-to "index"}}My Bookshelf{{/link-to}}</li>
+      <li class="left-nav-link">{{#link-to "add-games"}}Add Games{{/link-to}}</li>
+    </ul>
+  </div>
 
 {{outlet}}
