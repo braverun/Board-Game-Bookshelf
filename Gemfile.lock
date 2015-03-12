@@ -9,6 +9,8 @@ GEM
       multi_xml (>= 0.5.2)
     json (1.8.2)
     multi_xml (0.5.5)
+    puma (2.11.1)
+      rack (>= 1.1, < 2.0)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -25,4 +27,5 @@ PLATFORMS
 DEPENDENCIES
   bgg-api
   json
+  puma
   sinatra
