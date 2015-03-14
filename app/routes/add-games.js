@@ -7,5 +7,5 @@ export default Ember.Route.extend({
       /* jshint unused: false */
       return ajax("https://board-game-bookshelf.herokuapp.com/search");
   }
-  
+
 });
