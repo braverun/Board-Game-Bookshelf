@@ -2,27 +2,27 @@
     <h2 class="content-heading">Add Games</h2>
 
     <div class="search-container">
-      <form class="" {{action "search"}} method="post">
+      <form {{action "search" on="submit"}} method="post">
         <button class="fa fa-search search-button"></button>
-        {{input type="text" class="fa search-bar" value=searchBar placeholder="Search games"}}
+        {{input class="fa search-bar" value=searchBar placeholder="Search games"}}
       </form>
     </div>
 
-    <form class="add-game-form">
+
       <ul class="results">
 
-        <li class="result"><img class="result-image" src="">
+        {{#each result in searchResults}}
+        <li class="result">
+          <img class="result-image" {{bind-attr src=result.thumbnail.[0]}}>
+
           <div class="result-text">
-            <h3 class="result-title">Awesome Title</h3>
-            <p class="result-description">Some assert that the lamest jump reveals itself as a professed pink to those who look.
-              Nowhere is it disputed that traies are glummest nails. An ox is an unfit diploma.</p>
+            <h3 class="result-title">{{result.name.[0].value}}</h3>
+            <p class="result-description">{{result.description.[0]}}</p>
           </div>
           <button class="add-game-button">add game</button>
           </li>
-
+        {{/each}}
       </ul>
-
-    </form>
 
   </div>
 
