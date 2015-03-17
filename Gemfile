@@ -5,3 +5,4 @@ gem "sinatra"
 gem "json"
 gem "bgg-api"
 gem 'puma'
+gem 'sinatra-cross_origin'

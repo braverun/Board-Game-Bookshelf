@@ -1,6 +1,11 @@
 require "sinatra"
 require "json"
 require "bgg-api"
+require "sinatra/cross_origin"
+
+configure do
+  enable :cross_origin
+end
 
 get "/search/:title" do |title|
   content_type :json
