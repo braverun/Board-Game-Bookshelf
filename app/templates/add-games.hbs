@@ -17,9 +17,9 @@
 
           <div class="result-text">
             <h3 class="result-title">{{result.name.[0].value}}</h3>
-            <p class="result-description">{{result.description.[0]}}</p>
+            <p class="result-description">{{{result.description.[0]}}}</p>
           </div>
-          <button class="add-game-button">add game</button>
+          <button class="add-game-button" {{action "addGame" result on="click"}}>add game</button>
           </li>
         {{/each}}
       </ul>

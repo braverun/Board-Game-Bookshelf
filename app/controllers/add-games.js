@@ -14,6 +14,10 @@ export default Ember.Controller.extend({
       //    ideally: `this.store.findQuery('search', searchTerm)`
       // 3. populate a property (e.g. `searchResults`) with the results
       // 4. use {{#each game in searchResults}}
+    },
+
+    addGame: function(gameData) {
+      console.log(gameData);
     }
   },
 
