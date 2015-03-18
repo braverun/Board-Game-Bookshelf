@@ -17,7 +17,13 @@ export default Ember.Controller.extend({
     },
 
     addGame: function(gameData) {
-      console.log(gameData);
+      /* jshint unused: false */
+      var self = this;
+      return ajax({
+         url: "https://api.parse.com/1/classes/Game/",
+        type: "POST",
+        data: JSON.stringify(gameData),
+      }).then(console.log(gameData));
     }
   },
 
@@ -40,11 +46,3 @@ export default Ember.Controller.extend({
 
 
 });
-
-
-
-
-// Parse Info
-// appId:D79LREfrKhwYb7VQZkivDUqymZKDCYWwzxGMKWzQ
-//
-// restAPI:QXmLRZJdjwEMeaWgeS2VFWLVq8hDVgekS8ynssAv
