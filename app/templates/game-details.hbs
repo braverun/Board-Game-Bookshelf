@@ -1,24 +1,26 @@
   <div class="main-content">
-    <h2 class="content-heading">Awesome Title</h2>
+
+    {{!#each game in this.model}}
+    <h2 class="content-heading">{{model.name.[0].value}}</h2>
 
     <div class="game-details-container">
+
       <div class="game-details-left">
-        <img class="game-details-image" src="">
+        <img class="game-details-image" {{bind-attr src=model.image.[0]}}>
         <button class="remove-game">remove from bookshelf</button>
       </div>
 
       <div class="game-info">
-        <span class="player-count">Players: 3 - 5</span>
+        <span class="player-count">Players: {{model.minplayers.[0].value}} - {{model.maxplayers.[0].value}}</span>
         <br>
-        <span class="play-time">Play time: 60min</span>
-        <p class="game-description">Some assert that the lamest jump reveals itself as a professed pink to those who look.
-        Nowhere is it disputed that traies are glummest nails. An ox is an unfit diploma.
-        Authors often misinterpret the trouser as a taboo estimate, when in actuality it feels more like a spaceless temple.
-        One cannot separate firs from draggy cans. A piecemeal organisation's margaret comes with it the thought that the bastioned step-sister is a shoe. The gushy octopus comes from a scatheless station. Signatures are scrawny judges. The phrenic hexagon reveals itself as a decreed barge to those who look.</p>
+        <span class="play-time">Play time: {{model.playingtime.[0].value}}min</span>
+        <p class="game-description">{{{model.description.[0]}}}</p>
         <textarea placeholder="Comments" cols="60" rows="3" class="user-comments"></textarea>
       </div>
 
     </div>
+    {{!/each}}
+
   </div>
 
 

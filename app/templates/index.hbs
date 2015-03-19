@@ -1,18 +1,19 @@
 <div class="main-content">
     <h2 class="content-heading">My Bookshelf</h2>
     <div class="games">
-      <a href="game-details_id"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
-      <a href="game-details.html"><div class="game"><h3 class="game-title">Awesome Title</h3></div></a>
+
+      {{#each game in model}}
+
+       {{#link-to "game-details" game class="game"}}
+
+       <img class="game-image" {{bind-attr src=game.image.[0]}}>
+
+       <h3 class="game-title">{{game.name.[0].value}}</h3>
+
+        {{/link-to}}
+
+      {{/each}}
+
     </div>
   </div>
 {{outlet}}

@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
          url: "https://api.parse.com/1/classes/Game/",
         type: "POST",
         data: JSON.stringify(gameData),
-      }).then(console.log(gameData));
+      }).then(alert('Added'));
     }
   },
 

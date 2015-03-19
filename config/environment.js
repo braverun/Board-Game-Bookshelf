@@ -7,7 +7,8 @@ module.exports = function(environment) {
     baseURL: '/',
     locationType: 'auto',
     contentSecurityPolicy: {
-      'connect-src': "'self' https://board-game-bookshelf.herokuapp.com https://api.parse.com"
+      'connect-src': "'self' https://board-game-bookshelf.herokuapp.com https://api.parse.com",
+      'img-src': "'self' *"
     },
     EmberENV: {
       FEATURES: {
