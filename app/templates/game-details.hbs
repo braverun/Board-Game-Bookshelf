@@ -1,13 +1,13 @@
   <div class="main-content">
 
-    {{!#each game in this.model}}
+
     <h2 class="content-heading">{{model.name.[0].value}}</h2>
 
     <div class="game-details-container">
 
       <div class="game-details-left">
         <img class="game-details-image" {{bind-attr src=model.image.[0]}}>
-        <button class="remove-game">remove from bookshelf</button>
+        <button class="remove-game" {{action "destroy" on="click"}}>remove from bookshelf</button>
       </div>
 
       <div class="game-info">
@@ -15,11 +15,11 @@
         <br>
         <span class="play-time">Play time: {{model.playingtime.[0].value}}min</span>
         <p class="game-description">{{{model.description.[0]}}}</p>
-        <textarea placeholder="Comments" cols="60" rows="3" class="user-comments"></textarea>
+        <<button class="edit-notes">Edit</button><textarea placeholder="Notes" cols="60" rows="3" class="user-notes"></textarea>
       </div>
 
     </div>
-    {{!/each}}
+
 
   </div>
 

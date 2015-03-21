@@ -4,7 +4,7 @@ import Ember from 'ember';
 export default Ember.Object.extend({
   find: function(name, id){
     /* jshint unused: false */
-    return ajax("https://api.parse.com/1/classes/game/" + id).then(function(game){
+    return ajax("https://api.parse.com/1/classes/Game/" + id).then(function(game){
       game.id = game.objectId;
       delete game.objectId;
       return game;
@@ -13,7 +13,7 @@ export default Ember.Object.extend({
 
   findAll: function(name) {
     /* jshint unused: false */
-    return ajax("https://api.parse.com/1/classes/game").then(function(response){
+    return ajax("https://api.parse.com/1/classes/Game").then(function(response){
       return response.results.map(function(game) {
         game.id = game.objectId;
         delete game.objectId;
@@ -24,7 +24,7 @@ export default Ember.Object.extend({
 
   findQuery: function(name, query) {
     /* jshint unused: false */
-    return ajax("https://api.parse.com/1/classes/game", {
+    return ajax("https://api.parse.com/1/classes/Game", {
       data: Ember.$.param({
               where: JSON.stringify(query)
             })
@@ -40,7 +40,7 @@ export default Ember.Object.extend({
   destroy: function(name, record) {
     /* jshint unused: false */
     return ajax({
-      url: "https://api.parse.com/1/classes/game/" + record.id,
+      url: "https://api.parse.com/1/classes/Game/" + record.id,
       type: "DELETE"
     });
   },
@@ -49,7 +49,7 @@ export default Ember.Object.extend({
     /* jshint unused: false */
     if(record.id) {
       return ajax({
-        url: "https://api.parse.com/1/classes/game/" + record.id,
+        url: "https://api.parse.com/1/classes/Game/" + record.id,
         type: "PUT",
         data: JSON.stringify(record.toJSON())
       }).then(function(response) {
@@ -59,7 +59,7 @@ export default Ember.Object.extend({
       });
     } else {
       return ajax({
-        url: "https://api.parse.com/1/classes/game",
+        url: "https://api.parse.com/1/classes/Game",
         type: "POST",
         data: JSON.stringify(record.toJSON())
       }).then(function(response) {

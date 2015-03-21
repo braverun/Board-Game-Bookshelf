@@ -171,6 +171,7 @@ header {
 .results {
   margin: 25px 0;
   width: 90%;
+  max-width: 1000px;
 }
 
 .result {
@@ -184,8 +185,8 @@ header {
   display: inline-block;
   margin-right: 15px;
   background-color: #ffba45;
-  width: 120px;
-  height: 120px;
+  max-width: 140px;
+  max-height: 140px;
   vertical-align: top;
 }
 
@@ -203,6 +204,8 @@ header {
 }
 
 .result-description {
+  max-height: 75px;
+  overflow: scroll;
   font-size: 16px;
 }
 
@@ -240,6 +243,29 @@ header {
 
 .game-info {
   display: inline-block;
-  max-width: 40%;
+  width: 50%;
+  max-width: 800px;
+  vertical-align: top;
+}
+
+.game-description {
+  max-height: 375px;
+  overflow: scroll;
+}
+
+.edit-notes {
+  display: inline-block;
+  margin: 0 10px;
+  border: 2px solid $primary-accent-color;
+  background-color: white;
+  vertical-align: top;
+  color: $primary-color;
+  font-size: 10px;
+}
+
+.user-notes {
+  display: inline-block;
+  margin-bottom: 50px;
+  width: 85%;
   vertical-align: top;
 }
