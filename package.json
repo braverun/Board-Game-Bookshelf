@@ -33,6 +33,7 @@
     "ember-cli-sass": "3.1.0",
     "ember-cli-uglify": "1.0.1",
     "ember-export-application-global": "^1.0.2",
+    "ember-magic-man": "0.0.7",
     "express": "^4.8.5",
     "glob": "^4.0.5"
   }

@@ -53,9 +53,8 @@ export default Ember.Object.extend({
         type: "PUT",
         data: JSON.stringify(record.toJSON())
       }).then(function(response) {
-        response.id = response.objectId;
-        delete response.objectId;
-        return response;
+        record.updatedAt = response.updatedAt;
+        return record;
       });
     } else {
       return ajax({
@@ -63,8 +62,9 @@ export default Ember.Object.extend({
         type: "POST",
         data: JSON.stringify(record.toJSON())
       }).then(function(response) {
-        record.updatedAt = response.updatedAt;
-        return record;
+        record.id = response.objectId;
+        record.createdAt = response.createdAt;
+        return response;
       });
     }
   }
