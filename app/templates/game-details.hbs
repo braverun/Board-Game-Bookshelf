@@ -14,14 +14,25 @@
         <span class="player-count">Players: {{model.minplayers.[0].value}} - {{model.maxplayers.[0].value}}</span>
         <br>
         <span class="play-time">Play time: {{model.playingtime.[0].value}}min</span>
+        <h4>Description:</h4>
         <p class="game-description">{{{model.description.[0]}}}</p>
-        <<button class="edit-notes">Edit</button><textarea placeholder="Notes" cols="60" rows="3" class="user-notes"></textarea>
+        <h4>Notes:</h4>
+        <p class="user-notes">{{model.userNotes}}</p>
+        {{#if isEditing}}
+          {{textarea placeholder="Notes" class="user-notes js-user-notes" value=model.userNotes}}
+        {{else}}
+          <p>{{model.userNotes}}</p>
+        {{/if}}
+        <button class="edit-notes notes-buttons" {{action "edit" on="click"}}>edit</button>
+        <button class="save-notes notes-buttons" {{action "save" on="click"}}>save</button>
       </div>
 
     </div>
 
 
   </div>
+
+
 
 
 

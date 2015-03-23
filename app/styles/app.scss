@@ -69,7 +69,7 @@ header {
 
 .left-nav {
   float: left;
-  margin-right: 60px;
+  /* margin-right: 60px; */
   width: 140px;
 }
 
@@ -101,12 +101,13 @@ header {
 
 /* Index / Bookshelf Page */
 .game {
-  vertical-align: top;
   display: inline-block;
   transition: all 300ms;
   margin: 25px;
+  margin-bottom: 100px;
   width: 200px;
   height: 200px;
+  vertical-align: top;
   text-align: center;
   color: transparent;
 }
@@ -253,19 +254,21 @@ header {
   overflow: scroll;
 }
 
-.edit-notes {
+.user-notes {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  vertical-align: top;
+}
+
+.notes-buttons {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 50px;
   border: 2px solid $primary-accent-color;
   background-color: white;
   vertical-align: top;
   color: $primary-color;
   font-size: 10px;
-}
-
-.user-notes {
-  display: inline-block;
-  margin-bottom: 50px;
-  width: 85%;
-  vertical-align: top;
 }
