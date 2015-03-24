@@ -17,21 +17,13 @@ export default Ember.Controller.extend({
 
     edit: function() {
       /* jshint unused: false */
-      // var notes = this.get('js-user-notes');
       this.set('isEditing', true);
-      console.log(notes);
     },
 
     save: function() {
       /* jshint unused: false */
-      var model = this.get('model');
-      // TODO: this.('model').save();
-      return ajax ({
-        url: "https://api.parse.com/1/classes/Game/" + model.id,
-        type: "PUT",
-        data: JSON.stringify({userNotes: model.get('userNotes')})
-      });
-
+      this.get('model').save();
+      this.set('isEditing', false);
     },
   }
 });
