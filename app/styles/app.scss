@@ -41,15 +41,40 @@ a:visited {
 }
 
 header {
-  background-color: #003b6f;
-  height: 100px;
+  position: relative;
+  background-image: url('/assets/images/header-background.jpg');
+  background-position: center center;
+
+  /* background-color: #003b6f; */
+  height: 200px;
   text-align: center;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 59, 111, .3);
+    content: '';
+  }
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
 }
 
 .app-title {
   display: inline-block;
+  position: relative;
+  z-index: 1;
   margin: 0 auto;
-  padding-top: 30px;
+  margin-top: 80px;
   text-align: center;
   color: white;
   font-size: 40px;
@@ -91,19 +116,30 @@ header {
 }
 
 .main-content {
-  margin-left: 200px;
+  margin-left: 140px;
+  background-image: url('');
+  background-position: top center;
   color: #003b6f;
 }
 
 .content-heading {
+  margin: 0 auto;
+  padding: 30px;
   font-size: 30px;
 }
 
 /* Index / Bookshelf Page */
+.games {
+  margin: 0 auto;
+  background-color: white;
+  width: 75%;
+  text-align: center;
+}
+
 .game {
   display: inline-block;
   transition: all 300ms;
-  margin: 25px;
+  margin: 15px;
   margin-bottom: 100px;
   width: 200px;
   height: 200px;
