@@ -64,7 +64,7 @@ export default Ember.Object.extend({
       }).then(function(response) {
         record.id = response.objectId;
         record.createdAt = response.createdAt;
-        return response;
+        return record;
       });
     }
   }

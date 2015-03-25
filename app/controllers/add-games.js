@@ -30,19 +30,14 @@ export default Ember.Controller.extend({
   findQuery: function(searchTerm) {
     var bgbUrl = 'https://board-game-bookshelf.herokuapp.com/search/';
     var searchUrl = (bgbUrl + searchTerm);
-    console.log(searchUrl);
-    this.findAll(searchUrl);
-  },
-
-
-  findAll: function(searchUrl) {
-      /* jshint unused: false */
-      var self = this;
-      return ajax(searchUrl).then(function(data){
-        self.set('this.searchResults', data);
-        console.log(data);
+    var self = this;
+    return ajax(searchUrl).then(function(data){
+      var normalized = data.map(function(game){
+        game.bggId = game.id;
+        delete game.id;
+        return game;
       });
-  },
-
-
+      self.set('searchResults', normalized);
+    });
+  }
 });

@@ -2,13 +2,13 @@
     <h2 class="content-heading">My Bookshelf</h2>
     <div class="games">
 
-      {{#each game in model}}
+      {{#each game in sortedGames}}
 
        {{#link-to "game-details" game class="game"}}
 
        <img class="game-image" {{bind-attr src=game.image.[0]}}>
 
-       <h3 class="game-title">{{game.name.[0].value}}</h3>
+       <h3 class="game-title">{{game.nameString}}</h3>
 
         {{/link-to}}
 
