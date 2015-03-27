@@ -7,9 +7,10 @@ export default Ember.Controller.extend({
   actions: {
     destroy: function() {
       /* jshint unused: false */
-      this.get('model').destroy();
-      alert('Game has been removed');
-      this.transitionToRoute('index');
+      this.get('model').destroy().then(function(){
+        this.transitionToRoute('index');
+      }.bind(this));
+      // alert('Game has been removed');
     },
 
     edit: function() {

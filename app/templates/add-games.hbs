@@ -10,15 +10,22 @@
 
       <ul class="results">
 
-        {{#each result in searchResults}}
+        {{#each game in searchResults itemController="game"}}
         <li class="result">
-          <img class="result-image" {{bind-attr src=result.thumbnail.[0]}}>
+
+          <img class="result-image" {{bind-attr src=game.model.thumbnail.[0]}}>
 
           <div class="result-text">
-            <h3 class="result-title">{{result.name.[0].value}}</h3>
-            <p class="result-description">{{{result.description.[0]}}}</p>
+            <h3 class="result-title">{{game.model.name.[0].value}}</h3>
+            <p class="result-description">{{{game.model.description.[0]}}}</p>
           </div>
-          <button class="add-game-button" {{action "addGame" result on="click"}}>add game</button>
+
+          {{#if game.isAdded}}
+            <p class="added">added</p>
+          {{else}}
+            <button class="add-game-button" {{action "addGame" on="click"}}>add game</button>
+          {{/if}}
+
           </li>
         {{/each}}
 
