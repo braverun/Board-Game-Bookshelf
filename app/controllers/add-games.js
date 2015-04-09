@@ -2,10 +2,12 @@ import Ember from 'ember';
 import ajax from 'ic-ajax';
 
 export default Ember.Controller.extend({
+  searching: false,
   actions: {
     search: function() {
       var searchBar = this.get('searchBar');
       this.findQuery(searchBar);
+      this.set('searching', true);
     },
   },
 
@@ -19,7 +21,7 @@ export default Ember.Controller.extend({
         delete game.id;
         return game;
       });
-      self.set('searchResults', normalized);
+      self.set('searchResults', normalized).then(self.set('searching', false));
     });
   }
 });

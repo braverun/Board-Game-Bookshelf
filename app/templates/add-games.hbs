@@ -6,6 +6,12 @@
         <button class="fa fa-search search-button"></button>
         {{input class="fa search-bar" value=searchBar placeholder="Search games"}}
       </form>
+
+      {{#if searching}}
+        <p class="searching-text">Searching... This may take a minute.</p> <img src="/assets/images/ajax-loader.gif"/>
+      {{else}}
+
+      {{/if}}
     </div>
 
       <ul class="results">

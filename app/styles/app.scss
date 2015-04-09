@@ -15,7 +15,7 @@ $primary-accent-color: $endeavour-blue;
 /* Fonts */
 body {
   margin: 0;
-  background: url('images/left-nav-background.jpg') repeat-y 0;
+  background: url('/assets/images/blue-sidebar.png') repeat-y 0;
   padding: 0;
   font-family: 'Sanchez', serif;
 }
@@ -64,8 +64,8 @@ header {
   position: relative;
   z-index: 1;
   margin-right: 10px;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
 }
 
 .app-title {
@@ -73,10 +73,10 @@ header {
   position: relative;
   z-index: 1;
   margin: 0 auto;
-  margin-top: 80px;
+  margin-top: 70px;
   text-align: center;
   color: white;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .top-nav {
@@ -93,8 +93,9 @@ header {
 
 .left-nav {
   float: left;
+  background-color: $primary-accent-color;
   /* margin-right: 60px; */
-  width: 140px;
+  width: 200px;
 }
 
 .left-nav-ul {
@@ -108,6 +109,7 @@ header {
   margin-top: 20px;
   text-decoration: none;
   color: white;
+  font-size: 20px;
 }
 
 .left-nav-link:visited {
@@ -115,6 +117,7 @@ header {
 }
 
 .main-content {
+  text-align: center;
   margin-left: 140px;
   background-image: url('');
   background-position: top center;
@@ -124,7 +127,7 @@ header {
 .content-heading {
   margin: 0 auto;
   padding: 30px;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 /* Index / Bookshelf Page */
@@ -156,6 +159,7 @@ header {
 }
 
 .game-image {
+  transition: all 300ms;
   margin: 0;
   border: solid transparent 4px;
   box-shadow: 6px 6px 5px #888;
@@ -190,7 +194,7 @@ header {
 /* Add Game Page/ Search */
 .search-container {
   display: block;
-  margin: 20px;
+  margin: 20px 45px;
   width: 90%;
   text-align: center;
 }
@@ -202,12 +206,12 @@ header {
 }
 
 .search-bar {
-  width: 90%;
+  width: 75%;
 }
 
 .results {
-  margin: 25px 0;
-  width: 90%;
+  margin: 25px 115px;
+  width: 75%;
   max-width: 1000px;
 }
 
@@ -229,7 +233,7 @@ header {
 
 .result-text {
   display: inline-block;
-  width: 70%;
+  width: 65%;
   vertical-align: top;
 }
 
@@ -263,6 +267,8 @@ header {
 
 /* Game Details Page */
 .game-details-container {
+  margin-left: 100px;
+  text-align: left;
   color: #003b6f;
 }
 
@@ -295,7 +301,7 @@ header {
 }
 
 .game-description {
-  max-height: 375px;
+  max-height: 250px;
   overflow: scroll;
 }
 
