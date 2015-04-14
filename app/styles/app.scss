@@ -15,7 +15,7 @@ $primary-accent-color: $endeavour-blue;
 /* Fonts */
 body {
   margin: 0;
-  background: url('/assets/images/blue-sidebar.png') repeat-y 0;
+  background: url('../assets/images/blue-sidebar.png') repeat-y 0;
   padding: 0;
   font-family: 'Sanchez', serif;
 }
@@ -42,7 +42,7 @@ a:visited {
 
 header {
   position: relative;
-  background-image: url('/assets/images/header-background2.jpg');
+  background-image: url('../assets/images/header-background2.jpg');
   background-position: center center;
   background-size: cover;
   height: 200px;
